@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import ArtigoEsportivo
+from .serializers import ArtigoEsportivoSerializer
 
-# Create your views here.
+
+class ArtigoEsportivoViewSet(viewsets.ModelViewSet):
+    queryset = ArtigoEsportivo.objects.all()
+    serializer_class = ArtigoEsportivoSerializer
