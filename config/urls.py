@@ -8,7 +8,7 @@ from drf_spectacular.views import (
 )
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='/api/artigos')),
+    path('', RedirectView.as_view(url='/api/docs/')),
     path('admin/', admin.site.urls),
     path('api/', include('core.urls')),
 
